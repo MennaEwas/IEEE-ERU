@@ -1,27 +1,27 @@
 [
   {
     "id": "member-1",
-    "name": "",
-    "achievement": "",
-    "image": "assets/members/member-1.jpg",
+    "name": "Rokaya Hussein",
+    "achievement": "Marketing",
+    "image": "members/m1.jpg",
     "bio": "",
     "email": "",
     "linkedin": ""
   },
   {
     "id": "member-2",
-    "name": "",
-    "achievement": "",
-    "image": "assets/members/member-2.jpg",
+    "name": "Atef Mohamed",
+    "achievement": "PR",
+    "image": "members/m2.jpg",
     "bio": "",
     "email": "",
     "linkedin": ""
   },
   {
     "id": "member-3",
-    "name": "",
-    "achievement": "",
-    "image": "assets/members/member-3.jpg",
+    "name": "Yasser Mogahed",
+    "achievement": "Projects",
+    "image": "members/m3.jpg",
     "bio": "",
     "email": "",
     "linkedin": ""

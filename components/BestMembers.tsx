@@ -35,7 +35,7 @@ export default function BestMembers() {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <h2 className="text-center mb-12">Best Members</h2>
+        <h2 className="text-center mb-16 fade-in-up">Best Members</h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Carousel Container */}
@@ -47,7 +47,7 @@ export default function BestMembers() {
                 {members.map((member) => (
                   <div
                     key={member.id}
-                    className="min-w-full bg-white rounded-lg p-8 md:p-12"
+                    className="min-w-full bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 md:p-12 shadow-sm"
                   >
                     <div className="flex flex-col md:flex-row items-center gap-8">
                       <div className="flex-shrink-0">

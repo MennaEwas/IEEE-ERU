@@ -1,14 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+
+
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: '📘' },
-    { name: 'Twitter', href: '#', icon: '🐦' },
-    { name: 'LinkedIn', href: '#', icon: '💼' },
-    { name: 'Instagram', href: '#', icon: '📷' },
-  ]
+    { name: 'Facebook', href: '#', icon: FaFacebookF },
+    { name: 'Twitter', href: '#', icon: FaTwitter },
+    { name: 'LinkedIn', href: '#', icon: FaLinkedinIn },
+    { name: 'Instagram', href: '#', icon: FaInstagram },
+  ];
 
   const footerLinks = [
     { href: '/about', label: 'About' },
@@ -25,9 +30,13 @@ export default function Footer() {
           {/* Logo and Description */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="h-10 w-10 bg-ieee-blue rounded flex items-center justify-center">
-                <span className="text-white font-bold">IEEE</span>
-              </div>
+              <Image
+                src="/logo-footer.png"
+                alt="IEEE Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
               <span className="ml-3 font-semibold">Student Organization</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -56,18 +65,21 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-2xl"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl icon-white-hover"
+                    aria-label={social.name}
+                  >
+                    <IconComponent />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

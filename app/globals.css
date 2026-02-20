@@ -12,11 +12,13 @@
   }
   
   h1 {
-    @apply text-4xl md:text-5xl;
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply tracking-tight;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply tracking-tight;
   }
   
   h3 {
@@ -30,14 +32,158 @@
   }
   
   .section-padding {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-16 md:py-20 lg:py-24;
   }
   
   .btn-primary {
-    @apply bg-ieee-blue text-white px-6 py-3 rounded-md font-medium hover:bg-ieee-blue-dark transition-colors duration-200;
+    @apply bg-ieee-blue text-white px-8 py-3.5 rounded-lg font-semibold;
+    @apply hover:bg-ieee-blue-dark transform hover:scale-105;
+    @apply transition-all duration-300 ease-out;
+    @apply shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-white text-ieee-blue border-2 border-ieee-blue px-6 py-3 rounded-md font-medium hover:bg-ieee-blue hover:text-white transition-colors duration-200;
+    @apply bg-white text-ieee-blue border-2 border-ieee-blue px-8 py-3.5 rounded-lg font-semibold;
+    @apply hover:bg-ieee-blue hover:text-white;
+    @apply transform hover:scale-105;
+    @apply transition-all duration-300 ease-out;
+    @apply shadow-md hover:shadow-lg;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .fade-in-delay-1 {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .fade-in-delay-2 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+  
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .section-divider {
+    @apply border-t border-gray-200;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-fade-in,
+    .fade-in,
+    .fade-in-up,
+    .fade-in-delay-1,
+    .fade-in-delay-2 {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+    
+    .card-hover:hover {
+      transform: none;
+    }
+  }
+  
+  .icon-teal {
+    color: #05b98f;
+  }
+  
+  .icon-white {
+    color: #ffffff;
+  }
+  
+  .icon-teal-hover {
+    @apply transition-opacity duration-200 hover:opacity-80;
+    color: #05b98f;
+  }
+  
+  .icon-white-hover {
+    @apply transition-opacity duration-200 hover:opacity-80;
+    color: #ffffff;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-animation {
+  animation: marquee 30s linear infinite;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .marquee-animation {
+    animation-duration: 20s;
   }
 }

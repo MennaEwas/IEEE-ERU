@@ -7,6 +7,7 @@ import Leadership from '@/components/Leadership'
 import BestMembers from '@/components/BestMembers'
 import Events from '@/components/Events'
 import Partners from '@/components/Partners'
+import Consular from '@/components/Consular'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <BestMembers />
       <Events />
       <Partners />
+      <Consular />
       <Footer />
     </main>
   )

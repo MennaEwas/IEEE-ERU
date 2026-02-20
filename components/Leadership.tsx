@@ -35,7 +35,7 @@ export default function Leadership() {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <h2 className="text-center mb-12">Leadership & Officers</h2>
+        <h2 className="text-center mb-16 fade-in-up">Leadership & Officers</h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Carousel Container */}
@@ -47,7 +47,7 @@ export default function Leadership() {
                 {officers.map((officer) => (
                   <div
                     key={officer.id}
-                    className="min-w-full bg-gray-50 rounded-lg p-8 md:p-12"
+                    className="min-w-full bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 md:p-12 shadow-sm"
                   >
                     <div className="flex flex-col md:flex-row items-center gap-8">
                       <div className="flex-shrink-0">

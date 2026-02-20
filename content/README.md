@@ -23,8 +23,9 @@ Array of committee objects with:
 - `id`: Unique identifier
 - `name`: Committee name
 - `description`: Committee description
-- `icon`: Emoji or icon identifier
-- `link`: URL to committee detail page
+- `roleSummary`: Brief summary of the committee's role
+- `responsibilities`: Array of responsibility strings (displayed as bullet points)
+- `link`: URL to committee detail page (optional)
 
 ### `events.json`
 Array of event objects with:

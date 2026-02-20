@@ -1,27 +1,36 @@
 [
   {
     "id": "officer-1",
-    "name": "",
-    "position": "",
-    "image": "assets/officers/officer-1.jpg",
+    "name": "HAmssa Hossam",
+    "position": "Secretary",
+    "image": "officers/1.jpeg",
     "bio": "",
     "email": "",
     "linkedin": ""
   },
   {
     "id": "officer-2",
-    "name": "",
-    "position": "",
-    "image": "assets/officers/officer-2.jpg",
+    "name": "Mohamed El Azazy",
+    "position": "Treasurer",
+    "image": "officers/2.jpg",
     "bio": "",
     "email": "",
     "linkedin": ""
   },
   {
     "id": "officer-3",
-    "name": "",
-    "position": "",
-    "image": "assets/officers/officer-3.jpg",
+    "name": "Tasbeeh Mahmoud",
+    "position": "Founder & ChairPerson",
+    "image": "officers/3.jpeg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  },
+  {
+    "id": "officer-4",
+    "name": "Zahy Adel",
+    "position": "Vice ChairPerson",
+    "image": "officers/4.jpeg",
     "bio": "",
     "email": "",
     "linkedin": ""

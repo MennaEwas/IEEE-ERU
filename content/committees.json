@@ -1,23 +1,98 @@
 [
   {
     "id": "committee-1",
-    "name": "",
-    "description": "",
-    "icon": "",
+    "name": "Marketing",
+    "description": "Responsible for branding, campaigns, outreach strategy, and promoting events and initiatives.",
+    "roleSummary": "Promote IEEE ERU through strategic campaigns, social media, and audience engagement.",
+    "responsibilities": [
+      "Plan and execute marketing campaigns.",
+      "Manage social media accounts and content calendars.",
+      "Analyze engagement metrics and optimize outreach."
+    ],
     "link": ""
   },
   {
     "id": "committee-2",
-    "name": "",
-    "description": "",
-    "icon": "",
+    "name": "PR",
+    "description": "Handles public relations, partnerships communication, and external representation.",
+    "roleSummary": "Manage IEEE ERU’s external communications and maintain a positive public image.",
+    "responsibilities": [
+      "Write press releases and newsletters.",
+      "Build relationships with university and media contacts.",
+      "Represent IEEE ERU at community events."
+    ],
     "link": ""
   },
   {
     "id": "committee-3",
-    "name": "",
-    "description": "",
-    "icon": "",
+    "name": "Projects",
+    "description": "Manages technical and non-technical projects, innovation activities, and execution planning.",
+    "roleSummary": "Research, create, and reinvent innovative ideas for competitions and events within IEEE ERU.",
+    "responsibilities": [
+      "Research and invent new competition ideas.",
+      "Recreate existing events with creativity.",
+      "Collaborate with teams to implement concepts."
+    ],
+    "link": ""
+  },
+  {
+    "id": "committee-4",
+    "name": "Operations",
+    "description": "Oversees logistics, internal coordination, and operational workflow of events and activities.",
+    "roleSummary": "Ensure smooth execution of IEEE ERU activities by handling logistics and organizing events from start to finish.",
+    "responsibilities": [
+      "Arrange venues, equipment, and catering.",
+      "Organize event schedules, coordinate volunteers, and oversee event flow.",
+      "Collaborate with other teams to allocate resources efficiently."
+    ],
+    "link": ""
+  },
+  {
+    "id": "committee-5",
+    "name": "HR",
+    "description": "Responsible for recruitment, member engagement, training, and internal team wellbeing.",
+    "roleSummary": "Support IEEE ERU by recruiting, coordinating, and engaging volunteers and members.",
+    "responsibilities": [
+      "Manage recruitment and onboarding.",
+      "Track member participation and engagement.",
+      "Facilitate team communication and resolve conflicts."
+    ],
+    "link": ""
+  },
+  {
+    "id": "committee-6",
+    "name": "Graphic Design",
+    "description": "Creates visual materials including posters, branding assets, and design guidelines.",
+    "roleSummary": "Create eye-catching visuals to represent IEEE ERU’s identity, events, and branch activities.",
+    "responsibilities": [
+      "Design logos, posters, and social media graphics.",
+      "Collaborate with marketing to ensure consistent branding.",
+      "Prepare files for print and digital use."
+    ],
+    "link": ""
+  },
+  {
+    "id": "committee-7",
+    "name": "Multimedia",
+    "description": "Handles photography, media coverage, and multimedia documentation of activities.",
+    "roleSummary": "Capture memorable moments and key events to showcase IEEE ERU’s vibrant community through photos and videos.",
+    "responsibilities": [
+      "Capture high-quality event photos and videos.",
+      "Coordinate with graphic designers and video editors for multimedia production.",
+      "Collaborate with design and content teams for campaigns and social media."
+    ],
+    "link": ""
+  },
+  {
+    "id": "committee-8",
+    "name": "Video Editing",
+    "description": "Produces and edits video content for promotions, events, and digital presence.",
+    "roleSummary": "Produce engaging video content that promotes IEEE ERU events and activities.",
+    "responsibilities": [
+      "Edit event footage into polished videos.",
+      "Add effects, transitions, and soundtracks.",
+      "Work closely with photography and design teams."
+    ],
     "link": ""
   }
 ]

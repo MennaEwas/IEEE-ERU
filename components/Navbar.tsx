@@ -17,16 +17,20 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-100">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="h-10 w-10 md:h-12 md:w-12 bg-ieee-blue rounded flex items-center justify-center">
-              <span className="text-white font-bold text-lg md:text-xl">IEEE</span>
-            </div>
+            <Image
+              src="/logo-navbar.png"
+              alt="IEEE Logo"
+              width={48}
+              height={48}
+              className="h-10 w-10 md:h-12 md:w-12 object-contain"
+            />
             <span className="ml-3 text-lg md:text-xl font-semibold text-gray-900">
-              Student Organization
+              IEEE Student Organization
             </span>
           </Link>
 
@@ -36,9 +40,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-ieee-blue transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-ieee-blue transition-all duration-200 font-medium relative group"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ieee-blue group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
           </div>

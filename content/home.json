@@ -23,22 +23,22 @@
     {
       "title": "Professional Development",
       "description": "Access workshops, seminars, and training sessions to enhance your skills.",
-      "icon": "🎓"
+      "icon": "graduation"
     },
     {
       "title": "Networking Opportunities",
       "description": "Connect with industry professionals, alumni, and fellow students.",
-      "icon": "🤝"
+      "icon": "networking"
     },
     {
       "title": "Technical Projects",
       "description": "Participate in hands-on projects and competitions.",
-      "icon": "⚙️"
+      "icon": "projects"
     },
     {
       "title": "Community Impact",
       "description": "Make a difference through outreach and community service.",
-      "icon": "🌟"
+      "icon": "community"
     }
   ]
 }

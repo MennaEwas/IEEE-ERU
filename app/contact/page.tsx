@@ -3,6 +3,17 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+
+function SectionWithAnimation({ children }: { children: React.ReactNode }) {
+  const { ref, isVisible } = useScrollAnimation()
+  return (
+    <div ref={ref} className={isVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'}>
+      {children}
+    </div>
+  )
+}
 
 export default function ContactPage() {
   return (
@@ -13,13 +24,14 @@ export default function ContactPage() {
         subtitle="Get in touch with our team"
       />
       
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <div>
-                <h2 className="mb-6">Get in Touch</h2>
+      <SectionWithAnimation>
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {/* Contact Information */}
+                <div className="fade-in-up">
+                  <h2 className="mb-6">Get in Touch</h2>
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
@@ -52,26 +64,50 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
                     <div className="flex gap-4">
-                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="Facebook">
-                        📘
+                      <a 
+                        href="#" 
+                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        aria-label="Facebook"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaFacebookF />
                       </a>
-                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="Twitter">
-                        🐦
+                      <a 
+                        href="#" 
+                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        aria-label="Twitter"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaTwitter />
                       </a>
-                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="LinkedIn">
-                        💼
+                      <a 
+                        href="#" 
+                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        aria-label="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLinkedinIn />
                       </a>
-                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="Instagram">
-                        📷
+                      <a 
+                        href="#" 
+                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        aria-label="Instagram"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaInstagram />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <div>
-                <h2 className="mb-6">Send us a Message</h2>
+                {/* Contact Form */}
+                <div className="fade-in-delay-1">
+                  <h2 className="mb-6">Send us a Message</h2>
                 <form
                   name="contact"
                   method="POST"
@@ -146,11 +182,12 @@ export default function ContactPage() {
                     Send Message
                   </button>
                 </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </SectionWithAnimation>
 
       <Footer />
     </main>
