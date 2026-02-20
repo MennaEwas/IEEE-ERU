@@ -1,0 +1,29 @@
+[
+  {
+    "id": "member-1",
+    "name": "",
+    "achievement": "",
+    "image": "assets/members/member-1.jpg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  },
+  {
+    "id": "member-2",
+    "name": "",
+    "achievement": "",
+    "image": "assets/members/member-2.jpg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  },
+  {
+    "id": "member-3",
+    "name": "",
+    "achievement": "",
+    "image": "assets/members/member-3.jpg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  }
+]

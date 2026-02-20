@@ -1,0 +1,29 @@
+[
+  {
+    "id": "officer-1",
+    "name": "",
+    "position": "",
+    "image": "assets/officers/officer-1.jpg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  },
+  {
+    "id": "officer-2",
+    "name": "",
+    "position": "",
+    "image": "assets/officers/officer-2.jpg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  },
+  {
+    "id": "officer-3",
+    "name": "",
+    "position": "",
+    "image": "assets/officers/officer-3.jpg",
+    "bio": "",
+    "email": "",
+    "linkedin": ""
+  }
+]

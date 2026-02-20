@@ -1,0 +1,158 @@
+'use client'
+
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import PageHeader from '@/components/PageHeader'
+
+export default function ContactPage() {
+  return (
+    <main className="min-h-screen">
+      <Navbar />
+      <PageHeader 
+        title="Contact Us" 
+        subtitle="Get in touch with our team"
+      />
+      
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Contact Information */}
+              <div>
+                <h2 className="mb-6">Get in Touch</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                    <a 
+                      href="mailto:contact@ieee-student.org" 
+                      className="text-ieee-blue hover:text-ieee-blue-dark"
+                    >
+                      contact@ieee-student.org
+                    </a>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Office Location</h3>
+                    <p className="text-gray-600">
+                      Engineering Building<br />
+                      Room 101<br />
+                      University Campus
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Office Hours</h3>
+                    <p className="text-gray-600">
+                      Monday - Friday: 9:00 AM - 5:00 PM<br />
+                      Saturday: 10:00 AM - 2:00 PM<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
+                    <div className="flex gap-4">
+                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="Facebook">
+                        📘
+                      </a>
+                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="Twitter">
+                        🐦
+                      </a>
+                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="LinkedIn">
+                        💼
+                      </a>
+                      <a href="#" className="text-ieee-blue hover:text-ieee-blue-dark text-2xl" aria-label="Instagram">
+                        📷
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div>
+                <h2 className="mb-6">Send us a Message</h2>
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
+                  
+                  <div>
+                    <label htmlFor="name" className="block mb-2 font-medium text-gray-900">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block mb-2 font-medium text-gray-900">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="subject" className="block mb-2 font-medium text-gray-900">
+                      Subject *
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      placeholder="Message subject"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block mb-2 font-medium text-gray-900">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={6}
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      placeholder="Your message..."
+                    />
+                  </div>
+                  
+                  <button type="submit" className="btn-primary w-full">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
+}

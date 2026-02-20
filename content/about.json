@@ -1,0 +1,54 @@
+{
+  "mission": {
+    "title": "Our Mission",
+    "content": "Our mission is to foster innovation, professional development, and community engagement among engineering students. We strive to provide opportunities for networking, skill development, and real-world project experience that prepare our members for successful careers in engineering and technology."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "content": "To be the leading student organization that empowers the next generation of engineers and innovators through collaboration, learning, and professional development. We envision a community where students can grow, connect, and make a lasting impact in their fields."
+  },
+  "history": {
+    "title": "Our History",
+    "content": "Founded with a commitment to excellence and innovation, our IEEE Student Organization has been serving the engineering community for years. We have organized numerous workshops, technical sessions, and networking events that have helped hundreds of students advance their careers and expand their professional networks."
+  },
+  "values": [
+    {
+      "title": "Innovation",
+      "description": "We encourage creative thinking and innovative solutions to engineering challenges."
+    },
+    {
+      "title": "Excellence",
+      "description": "We strive for excellence in everything we do, from events to member services."
+    },
+    {
+      "title": "Community",
+      "description": "We build strong connections and foster a supportive community among members."
+    },
+    {
+      "title": "Professional Development",
+      "description": "We provide opportunities for skill development and career advancement."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Active Members",
+      "value": "0",
+      "description": "Members actively participating"
+    },
+    {
+      "label": "Events Organized",
+      "value": "0",
+      "description": "Total events hosted"
+    },
+    {
+      "label": "Years Active",
+      "value": "0",
+      "description": "Serving the community"
+    },
+    {
+      "label": "Partners",
+      "value": "0",
+      "description": "Industry partnerships"
+    }
+  ]
+}

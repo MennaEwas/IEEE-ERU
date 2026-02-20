@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Welcome to IEEE Student Organization",
+    "subtitle": "Empowering the next generation of engineers and innovators through collaboration, learning, and professional development.",
+    "primaryCTA": {
+      "text": "Join Us",
+      "link": "/join"
+    },
+    "secondaryCTA": {
+      "text": "View Events",
+      "link": "/events"
+    }
+  },
+  "aboutPreview": {
+    "title": "About Us",
+    "content": "Our IEEE Student Organization is dedicated to fostering innovation, professional development, and community engagement among engineering students. We provide opportunities for networking, skill development, and real-world project experience.",
+    "cta": {
+      "text": "Learn More",
+      "link": "/about"
+    }
+  },
+  "features": [
+    {
+      "title": "Professional Development",
+      "description": "Access workshops, seminars, and training sessions to enhance your skills.",
+      "icon": "🎓"
+    },
+    {
+      "title": "Networking Opportunities",
+      "description": "Connect with industry professionals, alumni, and fellow students.",
+      "icon": "🤝"
+    },
+    {
+      "title": "Technical Projects",
+      "description": "Participate in hands-on projects and competitions.",
+      "icon": "⚙️"
+    },
+    {
+      "title": "Community Impact",
+      "description": "Make a difference through outreach and community service.",
+      "icon": "🌟"
+    }
+  ]
+}
