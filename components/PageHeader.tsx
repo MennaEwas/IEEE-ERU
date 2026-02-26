@@ -4,10 +4,10 @@ interface PageHeaderProps {
   background?: 'white' | 'blue'
 }
 
-export default function PageHeader({ title, subtitle, background = 'white' }: PageHeaderProps) {
+export default function PageHeader({ title, subtitle, background = 'blue' }: PageHeaderProps) {
   const bgClass = background === 'blue' 
     ? 'bg-gradient-to-br from-ieee-blue to-ieee-blue-dark text-white' 
-    : 'bg-gray-50 text-gray-900'
+    : 'bg-white text-gray-900'
 
   return (
     <section className={`${bgClass} py-12 md:py-16`}>

@@ -22,16 +22,16 @@ export default function AboutPreview() {
   if (!content) return null
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-ieee-blue-dark">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-center mb-6 fade-in-up">{content.title}</h2>
-          <div className="prose prose-lg max-w-none text-center text-gray-700">
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-600 fade-in-delay-1">
+          <h2 className="text-center mb-6 fade-in-up text-white">{content.title}</h2>
+          <div className="prose prose-lg max-w-none text-center">
+            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-100 fade-in-delay-1">
               {content.content}
             </p>
             <div className="fade-in-delay-2">
-              <Link href={content.cta.link} className="btn-primary inline-block">
+              <Link href={content.cta.link} className="btn-secondary inline-block">
                 {content.cta.text}
               </Link>
             </div>

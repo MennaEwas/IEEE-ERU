@@ -25,14 +25,14 @@ export default function Committees() {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-ieee-blue">
       <div className="container-custom">
-        <h2 className="text-center mb-16 fade-in-up">Our Committees</h2>
+        <h2 className="text-center mb-16 fade-in-up text-white">Our Committees</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {committees.map((committee, index) => (
             <div
               key={committee.id}
-              className="bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 group"
+              className="bg-white rounded-xl shadow-md border-2 border-white/30 hover:border-white/100 hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 group hover:brightness-110 hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="p-6">
@@ -73,7 +73,7 @@ export default function Committees() {
                   expandedId === committee.id ? 'max-h-[1000px]' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-6 border-t border-gray-100 pt-4">
+                <div className="px-6 pb-6 border-t border-gray-200 pt-4">
                   {committee.roleSummary && (
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-900 mb-2">Role Summary</h4>

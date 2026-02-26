@@ -28,11 +28,11 @@ export default function Events() {
   if (upcomingEvents.length === 0) return null
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+    <section className="section-padding bg-gradient-to-b from-ieee-blue-dark to-ieee-blue">
       <div className="container-custom">
         <div className="flex justify-between items-center mb-16 fade-in-up">
-          <h2>Upcoming Events</h2>
-          <Link href="/events" className="text-ieee-blue hover:text-ieee-blue-dark font-semibold transition-all duration-200 hover:gap-2 flex items-center gap-1 group">
+          <h2 className="text-white">Upcoming Events</h2>
+          <Link href="/events" className="text-white hover:text-gray-200 font-semibold transition-all duration-200 hover:gap-2 flex items-center gap-1 group">
             View All
             <span className="transform group-hover:translate-x-1 transition-transform">→</span>
           </Link>
@@ -41,7 +41,7 @@ export default function Events() {
           {upcomingEvents.map((event, index) => (
             <div
               key={event.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100"
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100 hover:border-white/90 hover:brightness-105 hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {event.image && (

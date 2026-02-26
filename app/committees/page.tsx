@@ -33,7 +33,7 @@ function CommitteeCard({
   return (
     <div
       ref={ref}
-      className={`bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden card-hover group ${
+      className={`bg-white rounded-xl shadow-md border-2 border-white/30 hover:border-white/100 overflow-hidden card-hover group hover:brightness-110 hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100 ${
         isVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
@@ -76,7 +76,7 @@ function CommitteeCard({
           expandedId === committee.id ? 'max-h-[1000px]' : 'max-h-0'
         }`}
       >
-        <div className="px-8 pb-8 border-t border-gray-100 pt-6">
+        <div className="px-8 pb-8 border-t border-gray-200 pt-6">
           {committee.roleSummary && (
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-lg">Role Summary</h4>
@@ -137,7 +137,7 @@ export default function CommitteesPage() {
         subtitle="Explore the various committees that drive our organization forward"
       />
       
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-ieee-blue">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {committees.map((committee, index) => (
@@ -154,16 +154,16 @@ export default function CommitteesPage() {
       </section>
 
       <SectionWithAnimation>
-        <section className="section-padding bg-gray-50">
+        <section className="section-padding bg-ieee-blue-dark">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="mb-6 fade-in-up">Interested in Joining a Committee?</h2>
-              <p className="text-lg text-gray-700 mb-8 fade-in-delay-1">
+              <h2 className="mb-6 fade-in-up text-white">Interested in Joining a Committee?</h2>
+              <p className="text-lg text-gray-100 mb-8 fade-in-delay-1">
                 Our committees are always looking for passionate members who want to make a difference. 
                 Join us and contribute to our mission!
               </p>
               <div className="fade-in-delay-2">
-                <Link href="/join" className="btn-primary inline-block">
+                <Link href="/join" className="btn-secondary inline-block">
                   Join Us Today
                 </Link>
               </div>

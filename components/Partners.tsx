@@ -20,9 +20,9 @@ export default function Partners() {
   const duplicatedPartners = [...PARTNER_IMAGES, ...PARTNER_IMAGES]
 
   return (
-    <section className="section-padding bg-white overflow-hidden">
+    <section className="section-padding bg-ieee-blue-dark overflow-hidden">
       <div className="container-custom">
-        <h2 className="text-center mb-16 fade-in-up">Our Partners</h2>
+        <h2 className="text-center mb-16 fade-in-up text-white">Our Partners</h2>
         
         {/* Marquee Container */}
         <div 

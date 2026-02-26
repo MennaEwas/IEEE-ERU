@@ -33,9 +33,9 @@ export default function Leadership() {
   if (officers.length === 0) return null
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-ieee-blue-dark">
       <div className="container-custom">
-        <h2 className="text-center mb-16 fade-in-up">Leadership & Officers</h2>
+        <h2 className="text-center mb-16 fade-in-up text-white">Leadership & Officers</h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Carousel Container */}
@@ -74,7 +74,7 @@ export default function Leadership() {
                         <p className="text-ieee-blue font-medium mb-4">
                           {officer.position || 'Position'}
                         </p>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed">
                           {officer.bio || 'Officer bio placeholder...'}
                         </p>
                         {(officer.email || officer.linkedin) && (

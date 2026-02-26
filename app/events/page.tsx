@@ -26,7 +26,7 @@ function EventCard({ event, index }: { event: Event; index: number }) {
   return (
     <div
       ref={ref}
-      className={`bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 card-hover group ${
+      className={`bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-white/90 card-hover group hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100 ${
         isVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
@@ -120,15 +120,15 @@ export default function EventsPage() {
       />
       
       {/* Filter Tabs */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-ieee-blue border-b border-ieee-blue-dark">
         <div className="container-custom">
           <div className="flex gap-4 overflow-x-auto py-4">
             <button
               onClick={() => setFilter('all')}
               className={`px-6 py-2 rounded-md font-medium whitespace-nowrap transition-all duration-200 transform hover:scale-105 ${
                 filter === 'all'
-                  ? 'bg-ieee-blue text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-white text-ieee-blue shadow-md'
+                  : 'bg-ieee-blue-dark text-white hover:bg-ieee-blue-light'
               }`}
             >
               All Events
@@ -137,8 +137,8 @@ export default function EventsPage() {
               onClick={() => setFilter('upcoming')}
               className={`px-6 py-2 rounded-md font-medium whitespace-nowrap transition-all duration-200 transform hover:scale-105 ${
                 filter === 'upcoming'
-                  ? 'bg-ieee-blue text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-white text-ieee-blue shadow-md'
+                  : 'bg-ieee-blue-dark text-white hover:bg-ieee-blue-light'
               }`}
             >
               Upcoming
@@ -147,8 +147,8 @@ export default function EventsPage() {
               onClick={() => setFilter('past')}
               className={`px-6 py-2 rounded-md font-medium whitespace-nowrap transition-all duration-200 transform hover:scale-105 ${
                 filter === 'past'
-                  ? 'bg-ieee-blue text-white shadow-md'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-white text-ieee-blue shadow-md'
+                  : 'bg-ieee-blue-dark text-white hover:bg-ieee-blue-light'
               }`}
             >
               Past Events
@@ -158,11 +158,11 @@ export default function EventsPage() {
       </section>
 
       {/* Events Grid */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-ieee-blue-dark">
         <div className="container-custom">
           {filteredEvents.length === 0 ? (
             <div className="text-center py-12 fade-in-up">
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-100 text-lg">
                 No events found. Check back soon for upcoming events!
               </p>
             </div>

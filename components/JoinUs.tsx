@@ -1,3 +1,5 @@
+'use client'
+
 export default function JoinUs() {
   return (
     <section className="section-padding bg-gradient-to-br from-ieee-blue via-ieee-blue to-ieee-blue-dark text-white relative overflow-hidden">
@@ -16,7 +18,7 @@ export default function JoinUs() {
             Become part of a vibrant community of engineers, innovators, and leaders.
             Connect with peers, develop new skills, and make a lasting impact.
           </p>
-          <div className="bg-white rounded-xl p-4 md:p-8 overflow-hidden shadow-2xl fade-in-delay-2">
+          <div className="bg-white rounded-xl p-4 md:p-8 overflow-hidden shadow-2xl fade-in-delay-2 border-2 border-white/30 hover:border-white/100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group hover:brightness-110 hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLScDqnxi8DqF3s-gTOED0Ve3YY07hqI5yYWO2gEFYlnrm4i0JQ/viewform?embedded=true"
               width="100%"

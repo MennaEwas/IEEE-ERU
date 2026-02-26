@@ -20,9 +20,9 @@ export default function Consular() {
   if (!content) return null
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
+    <section className="section-padding bg-gradient-to-b from-ieee-blue to-ieee-blue-dark">
       <div className="container-custom">
-        <h2 className="text-center mb-16 fade-in-up">{content.title}</h2>
+        <h2 className="text-center mb-16 fade-in-up text-white">{content.title}</h2>
         
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -43,7 +43,7 @@ export default function Consular() {
             {/* Bio Text */}
             <div className="fade-in-delay-1 order-1 md:order-2">
               <div className="prose prose-lg max-w-none">
-                <div className="text-gray-700 leading-relaxed space-y-6">
+                <div className="text-gray-100 leading-relaxed space-y-6">
                   {content.bio.split(/\n\n|\\n\\n/).filter(p => p.trim()).map((paragraph, index) => (
                     <p key={index} className="text-lg md:text-xl">
                       {paragraph.trim()}

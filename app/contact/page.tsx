@@ -25,27 +25,27 @@ export default function ContactPage() {
       />
       
       <SectionWithAnimation>
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-ieee-blue">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Contact Information */}
                 <div className="fade-in-up">
-                  <h2 className="mb-6">Get in Touch</h2>
+                  <h2 className="mb-6 text-white">Get in Touch</h2>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                    <h3 className="font-semibold text-white mb-2">Email</h3>
                     <a 
                       href="mailto:contact@ieee-student.org" 
-                      className="text-ieee-blue hover:text-ieee-blue-dark"
+                      className="text-gray-200 hover:text-white transition-colors"
                     >
                       contact@ieee-student.org
                     </a>
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Office Location</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-white mb-2">Office Location</h3>
+                    <p className="text-gray-200">
                       Engineering Building<br />
                       Room 101<br />
                       University Campus
@@ -53,8 +53,8 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Office Hours</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-white mb-2">Office Hours</h3>
+                    <p className="text-gray-200">
                       Monday - Friday: 9:00 AM - 5:00 PM<br />
                       Saturday: 10:00 AM - 2:00 PM<br />
                       Sunday: Closed
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
+                    <h3 className="font-semibold text-white mb-4">Follow Us</h3>
                     <div className="flex gap-4">
                       <a 
                         href="#" 
@@ -107,7 +107,7 @@ export default function ContactPage() {
 
                 {/* Contact Form */}
                 <div className="fade-in-delay-1">
-                  <h2 className="mb-6">Send us a Message</h2>
+                  <h2 className="mb-6 text-white">Send us a Message</h2>
                 <form
                   name="contact"
                   method="POST"
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   </p>
                   
                   <div>
-                    <label htmlFor="name" className="block mb-2 font-medium text-gray-900">
+                    <label htmlFor="name" className="block mb-2 font-medium text-white">
                       Name *
                     </label>
                     <input
@@ -131,13 +131,13 @@ export default function ContactPage() {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      className="w-full px-4 py-2 border border-white/30 bg-white/10 text-white placeholder-gray-300 rounded-md focus:ring-2 focus:ring-white focus:border-white focus:bg-white/20"
                       placeholder="Your name"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block mb-2 font-medium text-gray-900">
+                    <label htmlFor="email" className="block mb-2 font-medium text-white">
                       Email *
                     </label>
                     <input
@@ -145,13 +145,13 @@ export default function ContactPage() {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      className="w-full px-4 py-2 border border-white/30 bg-white/10 text-white placeholder-gray-300 rounded-md focus:ring-2 focus:ring-white focus:border-white focus:bg-white/20"
                       placeholder="your.email@example.com"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block mb-2 font-medium text-gray-900">
+                    <label htmlFor="subject" className="block mb-2 font-medium text-white">
                       Subject *
                     </label>
                     <input
@@ -159,13 +159,13 @@ export default function ContactPage() {
                       id="subject"
                       name="subject"
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      className="w-full px-4 py-2 border border-white/30 bg-white/10 text-white placeholder-gray-300 rounded-md focus:ring-2 focus:ring-white focus:border-white focus:bg-white/20"
                       placeholder="Message subject"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block mb-2 font-medium text-gray-900">
+                    <label htmlFor="message" className="block mb-2 font-medium text-white">
                       Message *
                     </label>
                     <textarea
@@ -173,12 +173,12 @@ export default function ContactPage() {
                       name="message"
                       rows={6}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
+                      className="w-full px-4 py-2 border border-white/30 bg-white/10 text-white placeholder-gray-300 rounded-md focus:ring-2 focus:ring-white focus:border-white focus:bg-white/20"
                       placeholder="Your message..."
                     />
                   </div>
                   
-                  <button type="submit" className="btn-primary w-full">
+                  <button type="submit" className="btn-secondary w-full">
                     Send Message
                   </button>
                 </form>

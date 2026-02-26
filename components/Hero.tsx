@@ -56,7 +56,7 @@ export default function Hero() {
             <Link href={content.primaryCTA.link} className="btn-secondary">
               {content.primaryCTA.text}
             </Link>
-            <Link href={content.secondaryCTA.link} className="btn-primary bg-white text-ieee-blue hover:bg-gray-50">
+            <Link href={content.secondaryCTA.link} className="btn-primary">
               {content.secondaryCTA.text}
             </Link>
           </div>

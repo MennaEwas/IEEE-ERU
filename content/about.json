@@ -36,22 +36,22 @@
   "stats": [
     {
       "label": "Active Members",
-      "value": "0",
+      "value": "150",
       "description": "Members actively participating"
     },
     {
       "label": "Events Organized",
-      "value": "0",
+      "value": "50",
       "description": "Total events hosted"
     },
     {
       "label": "Years Active",
-      "value": "0",
+      "value": "5",
       "description": "Serving the community"
     },
     {
       "label": "Partners",
-      "value": "0",
+      "value": "25",
       "description": "Industry partnerships"
     }
   ]

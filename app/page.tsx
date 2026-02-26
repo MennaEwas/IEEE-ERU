@@ -8,6 +8,7 @@ import BestMembers from '@/components/BestMembers'
 import Events from '@/components/Events'
 import Partners from '@/components/Partners'
 import Consular from '@/components/Consular'
+import StatsSection from '@/components/StatsSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Events />
       <Partners />
       <Consular />
+      <StatsSection />
       <Footer />
     </main>
   )

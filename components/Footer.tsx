@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-400">
-          <p>© {currentYear} IEEE Student Organization. All rights reserved.</p>
+          <p>© {currentYear} IEEE ERU Student Organization. All rights reserved.</p>
         </div>
       </div>
     </footer>

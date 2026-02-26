@@ -44,11 +44,11 @@ export default function AboutPage() {
       
       {/* Introduction Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-ieee-blue">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
-              <h2 className="mb-6 fade-in-up">{content.introduction.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed fade-in-delay-1">
+              <h2 className="mb-6 fade-in-up text-white">{content.introduction.title}</h2>
+              <p className="text-lg text-gray-100 leading-relaxed fade-in-delay-1">
                 {content.introduction.content}
               </p>
             </div>
@@ -58,11 +58,11 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-ieee-blue-dark">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
-              <h2 className="mb-6 fade-in-up">{content.mission.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed fade-in-delay-1">
+              <h2 className="mb-6 fade-in-up text-white">{content.mission.title}</h2>
+              <p className="text-lg text-gray-100 leading-relaxed fade-in-delay-1">
                 {content.mission.content}
               </p>
             </div>
@@ -72,11 +72,11 @@ export default function AboutPage() {
 
       {/* Vision Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-gray-50">
+        <section className="section-padding bg-ieee-blue">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
-              <h2 className="mb-6 fade-in-up">{content.vision.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed fade-in-delay-1">
+              <h2 className="mb-6 fade-in-up text-white">{content.vision.title}</h2>
+              <p className="text-lg text-gray-100 leading-relaxed fade-in-delay-1">
                 {content.vision.content}
               </p>
             </div>
@@ -86,11 +86,11 @@ export default function AboutPage() {
 
       {/* History Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-ieee-blue-dark">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
-              <h2 className="mb-6 fade-in-up">{content.history.title}</h2>
-              <p className="text-lg text-gray-700 leading-relaxed fade-in-delay-1">
+              <h2 className="mb-6 fade-in-up text-white">{content.history.title}</h2>
+              <p className="text-lg text-gray-100 leading-relaxed fade-in-delay-1">
                 {content.history.content}
               </p>
             </div>
@@ -100,15 +100,15 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-gray-50">
+        <section className="section-padding bg-ieee-blue">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-center mb-12 fade-in-up">Our Values</h2>
+              <h2 className="text-center mb-12 fade-in-up text-white">Our Values</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {content.values.map((value, index) => (
                   <div 
                     key={index} 
-                    className="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100 hover:border-ieee-blue/20"
+                    className="bg-white p-6 rounded-xl shadow-sm card-hover border border-white/20 hover:border-white/90 hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <h3 className="text-xl font-semibold mb-3 text-ieee-blue group-hover:text-ieee-blue-dark transition-colors">
