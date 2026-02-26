@@ -108,7 +108,7 @@ export default function AboutPage() {
                 {content.values.map((value, index) => (
                   <div 
                     key={index} 
-                    className="bg-white p-6 rounded-xl shadow-sm card-hover border border-white/20 hover:border-white/90 hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100"
+                    className="bg-white p-6 rounded-xl shadow-sm card-hover border-2 border-white/30 hover:border-white/100 hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <h3 className="text-xl font-semibold mb-3 text-ieee-blue group-hover:text-ieee-blue-dark transition-colors">

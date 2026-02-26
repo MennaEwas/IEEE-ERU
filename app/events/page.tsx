@@ -26,7 +26,7 @@ function EventCard({ event, index }: { event: Event; index: number }) {
   return (
     <div
       ref={ref}
-      className={`bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-white/90 card-hover group hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100 ${
+      className={`bg-white rounded-xl shadow-md overflow-hidden border-2 border-white/30 hover:border-white/100 card-hover group hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100 ${
         isVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}

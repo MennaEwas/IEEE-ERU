@@ -37,7 +37,7 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="text-center group bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border border-white/20 hover:border-white/90 hover:brightness-105 hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100"
+              className="text-center group bg-white p-8 rounded-xl shadow-sm card-hover border-2 border-white/30 hover:border-white/100 hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100 transform hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">

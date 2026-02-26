@@ -41,7 +41,7 @@ export default function Events() {
           {upcomingEvents.map((event, index) => (
             <div
               key={event.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100 hover:border-white/90 hover:brightness-105 hover:shadow-[0_0_35px_rgba(255,255,255,0.9)] hover:ring-4 hover:ring-white/100"
+              className="bg-white rounded-xl shadow-md overflow-hidden card-hover border-2 border-white/30 hover:border-white/100 hover:shadow-[0_0_50px_rgba(255,255,255,1)] hover:ring-4 hover:ring-white/100 transform hover:-translate-y-1 group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {event.image && (
