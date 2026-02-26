@@ -13,7 +13,7 @@ interface Stat {
 function Counter({ target, duration = 2000 }: { target: number; duration?: number }) {
   const [count, setCount] = useState(0)
   const [hasStarted, setHasStarted] = useState(false)
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 })
+  const { ref, isVisible } = useScrollAnimation()
 
   useEffect(() => {
     if (isVisible && !hasStarted) {
