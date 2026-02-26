@@ -71,12 +71,9 @@ function CommitteeCard({
       </div>
 
       {/* Collapsible Content */}
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          expandedId === committee.id ? 'max-h-[1000px]' : 'max-h-0'
-        }`}
-      >
-        <div className="px-8 pb-8 border-t border-gray-200 pt-6">
+      {expandedId === committee.id && (
+        <div className="overflow-hidden transition-all duration-300 ease-in-out max-h-[1000px] opacity-100">
+          <div className="px-8 pb-8 border-t border-gray-200 pt-6">
           {committee.roleSummary && (
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-lg">Role Summary</h4>
@@ -102,8 +99,9 @@ function CommitteeCard({
               Role summary and responsibilities coming soon...
             </p>
           )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
@@ -126,7 +124,14 @@ export default function CommitteesPage() {
   }, [])
 
   const toggleExpand = (id: string) => {
-    setExpandedId(expandedId === id ? null : id)
+    setExpandedId(prev => {
+      // If clicking the same card, collapse it
+      if (prev === id) {
+        return null
+      }
+      // Otherwise, expand only this card (collapse any other)
+      return id
+    })
   }
 
   return (
