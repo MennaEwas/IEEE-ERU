@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa6';
 
 
 export default function Footer() {
@@ -9,10 +10,10 @@ export default function Footer() {
 
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: FaFacebookF },
-    { name: 'Twitter', href: '#', icon: FaTwitter },
     { name: 'LinkedIn', href: '#', icon: FaLinkedinIn },
+    { name: 'Email', href: '#', icon: FaEnvelope },
     { name: 'Instagram', href: '#', icon: FaInstagram },
+    { name: 'TikTok', href: '#', icon: FaTiktok },
   ];
 
   const footerLinks = [

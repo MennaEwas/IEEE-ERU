@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import bestMembersData from '@/content/best-members.json'
+import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 
 interface BestMember {
   id: string
@@ -77,28 +78,25 @@ export default function BestMembers() {
                         <p className="text-gray-700 leading-relaxed">
                           {member.bio || 'Member bio placeholder...'}
                         </p>
-                        {(member.email || member.linkedin) && (
-                          <div className="mt-4 flex gap-4 justify-center md:justify-start">
-                            {member.email && (
-                              <a
-                                href={`mailto:${member.email}`}
-                                className="text-ieee-blue hover:text-ieee-blue-dark"
-                              >
-                                Email
-                              </a>
-                            )}
-                            {member.linkedin && (
-                              <a
-                                href={member.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-ieee-blue hover:text-ieee-blue-dark"
-                              >
-                                LinkedIn
-                              </a>
-                            )}
-                          </div>
-                        )}
+                        {/* Contact Icons - Always Display */}
+                        <div className="mt-4 flex gap-4 justify-center md:justify-start">
+                          <a
+                            href={member.linkedin || '#'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-all duration-200 hover:scale-110"
+                            aria-label={`${member.name} LinkedIn`}
+                          >
+                            <FaLinkedinIn />
+                          </a>
+                          <a
+                            href={`mailto:${member.email || '#'}`}
+                            className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-all duration-200 hover:scale-110"
+                            aria-label={`${member.name} Email`}
+                          >
+                            <FaEnvelope />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

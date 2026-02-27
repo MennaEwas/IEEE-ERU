@@ -194,3 +194,17 @@
     animation-duration: 20s;
   }
 }
+
+@keyframes floatZ {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+.float-z-animation {
+  animation: floatZ 3s ease-in-out infinite;
+  will-change: transform;
+}

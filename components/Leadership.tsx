@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import officersData from '@/content/officers.json'
+import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 
 interface Officer {
   id: string
@@ -47,11 +48,15 @@ export default function Leadership() {
                 {officers.map((officer) => (
                   <div
                     key={officer.id}
-                    className="min-w-full bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 md:p-12 shadow-sm"
+                    className="min-w-full bg-ieee-blue-dark/95 border-2 border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300"
                   >
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                      <div className="flex-shrink-0">
-                        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-ieee-blue overflow-hidden flex items-center justify-center">
+                    <div className="flex flex-col items-center text-center">
+                      {/* Decorative arch background for image */}
+                      <div className="relative mb-6">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-48 h-24 bg-white/5 rounded-full blur-2xl"></div>
+                        </div>
+                        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-ieee-blue border-4 border-white/30 overflow-hidden flex items-center justify-center shadow-xl">
                           {officer.image ? (
                             <Image
                               src={`/${officer.image}`}
@@ -67,38 +72,38 @@ export default function Leadership() {
                           )}
                         </div>
                       </div>
-                      <div className="flex-1 text-center md:text-left">
-                        <h3 className="text-2xl font-semibold mb-2 text-gray-900">
-                          {officer.name || 'Officer Name'}
-                        </h3>
-                        <p className="text-ieee-blue font-medium mb-4">
-                          {officer.position || 'Position'}
-                        </p>
-                        <p className="text-gray-700 leading-relaxed">
-                          {officer.bio || 'Officer bio placeholder...'}
-                        </p>
-                        {(officer.email || officer.linkedin) && (
-                          <div className="mt-4 flex gap-4 justify-center md:justify-start">
-                            {officer.email && (
-                              <a
-                                href={`mailto:${officer.email}`}
-                                className="text-ieee-blue hover:text-ieee-blue-dark"
-                              >
-                                Email
-                              </a>
-                            )}
-                            {officer.linkedin && (
-                              <a
-                                href={officer.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-ieee-blue hover:text-ieee-blue-dark"
-                              >
-                                LinkedIn
-                              </a>
-                            )}
-                          </div>
-                        )}
+                      
+                      {/* Name and Position */}
+                      <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+                        {officer.name || 'Officer Name'}
+                      </h3>
+                      <p className="text-ieee-blue-light font-medium mb-4 text-lg">
+                        {officer.position || 'Position'}
+                      </p>
+                      
+                      {/* Bio */}
+                      <p className="text-gray-200 leading-relaxed mb-6 max-w-2xl">
+                        {officer.bio || 'Officer bio placeholder...'}
+                      </p>
+                      
+                      {/* Contact Icons - Always Display */}
+                      <div className="flex gap-4 justify-center">
+                        <a
+                          href={officer.linkedin || '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-2xl text-white hover:text-ieee-blue-light transition-all duration-200 hover:scale-110"
+                          aria-label={`${officer.name} LinkedIn`}
+                        >
+                          <FaLinkedinIn />
+                        </a>
+                        <a
+                          href={`mailto:${officer.email || '#'}`}
+                          className="text-2xl text-white hover:text-ieee-blue-light transition-all duration-200 hover:scale-110"
+                          aria-label={`${officer.name} Email`}
+                        >
+                          <FaEnvelope />
+                        </a>
                       </div>
                     </div>
                   </div>

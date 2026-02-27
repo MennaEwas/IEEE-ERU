@@ -38,10 +38,14 @@ export default function Partners() {
               }}
             >
               {duplicatedPartners.map((image, index) => (
-                <div
+                <a
                   key={`${image}-${index}`}
-                  className="flex-shrink-0 flex items-center justify-center"
+                  href="#"
+                  className="flex-shrink-0 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300"
                   style={{ width: '200px', height: '100px' }}
+                  aria-label={`Partner ${index + 1}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src={`/${image}`}
@@ -50,7 +54,7 @@ export default function Partners() {
                     height={100}
                     className="object-contain w-full h-full grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                   />
-                </div>
+                </a>
               ))}
             </div>
           </div>

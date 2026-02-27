@@ -3,7 +3,8 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa'
+import { FaTiktok } from 'react-icons/fa6'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 function SectionWithAnimation({ children }: { children: React.ReactNode }) {
@@ -67,24 +68,6 @@ export default function ContactPage() {
                       <a 
                         href="#" 
                         className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
-                        aria-label="Facebook"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaFacebookF />
-                      </a>
-                      <a 
-                        href="#" 
-                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
-                        aria-label="Twitter"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaTwitter />
-                      </a>
-                      <a 
-                        href="#" 
-                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
                         aria-label="LinkedIn"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -94,11 +77,29 @@ export default function ContactPage() {
                       <a 
                         href="#" 
                         className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        aria-label="Email"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaEnvelope />
+                      </a>
+                      <a 
+                        href="#" 
+                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
                         aria-label="Instagram"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <FaInstagram />
+                      </a>
+                      <a 
+                        href="#" 
+                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        aria-label="TikTok"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaTiktok />
                       </a>
                     </div>
                   </div>
