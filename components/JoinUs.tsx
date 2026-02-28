@@ -88,7 +88,7 @@ export default function JoinUs() {
               {/* Non-ERU Info */}
               <div>
                 <label className="block mb-2 text-sm font-semibold text-gray-800">
-                  If you're not an ERU student please mention your University and Faculty
+                  If you&apos;re not an ERU student please mention your University and Faculty
                 </label>
                 <input
                   type="text"
