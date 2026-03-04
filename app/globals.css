@@ -128,6 +128,34 @@
     @apply transition-opacity duration-200 hover:opacity-80;
     color: #ffffff;
   }
+
+  /* Best Members gold shine card */
+  .best-member-card {
+    @apply relative overflow-hidden rounded-xl bg-ieee-blue-dark shadow-xl;
+    @apply transition-transform transition-shadow duration-300 ease-out;
+    @apply hover:-translate-y-1 hover:shadow-2xl hover:brightness-110;
+  }
+
+  .best-member-card::before {
+    content: '';
+    position: absolute;
+    inset: -60%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 200, 0, 0) 0%,
+      rgba(255, 200, 0, 0.85) 45%,
+      rgba(255, 160, 0, 0.75) 60%,
+      rgba(255, 200, 0, 0) 100%
+    );
+    opacity: 0;
+    transform: translate3d(-120%, -40%, 0);
+    pointer-events: none;
+    animation: goldShineSweep 2.2s linear infinite;
+  }
+
+  .best-member-card:hover::before {
+    animation: goldShineSweep 1.2s linear;
+  }
 }
 
 @keyframes fadeIn {
@@ -207,4 +235,22 @@
 .float-z-animation {
   animation: floatZ 3s ease-in-out infinite;
   will-change: transform;
+}
+
+@keyframes goldShineSweep {
+  0% {
+    opacity: 0;
+    transform: translate3d(-140%, -60%, 0);
+  }
+  20% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.25;
+    transform: translate3d(0%, 0%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(140%, 60%, 0);
+  }
 }

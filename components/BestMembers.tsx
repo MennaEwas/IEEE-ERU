@@ -10,26 +10,16 @@ interface BestMember {
   name: string
   achievement: string
   image: string
-  bio: string
   email: string
   linkedin: string
 }
 
 export default function BestMembers() {
   const [members, setMembers] = useState<BestMember[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     setMembers(bestMembersData as BestMember[])
   }, [])
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % members.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + members.length) % members.length)
-  }
 
   if (members.length === 0) return null
 
@@ -37,128 +27,59 @@ export default function BestMembers() {
     <section className="section-padding bg-ieee-blue">
       <div className="container-custom">
         <h2 className="text-center mb-16 fade-in-up text-white">Best Members</h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Carousel Container */}
-            <div className="overflow-hidden rounded-lg">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {members.map((member) => (
               <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                key={member.id}
+                className="best-member-card p-6 md:p-8 h-full flex flex-col"
               >
-                {members.map((member) => (
-                  <div
-                    key={member.id}
-                    className="min-w-full bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 md:p-12 shadow-sm"
-                  >
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                      <div className="flex-shrink-0">
-                        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-ieee-blue overflow-hidden flex items-center justify-center">
-                          {member.image ? (
-                            <Image
-                              src={`/${member.image}`}
-                              alt={member.name || 'Member'}
-                              width={160}
-                              height={160}
-                              className="object-cover w-full h-full"
-                            />
-                          ) : (
-                            <span className="text-white text-4xl font-bold">
-                              {member.name?.charAt(0) || '?'}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      <div className="flex-1 text-center md:text-left">
-                        <h3 className="text-2xl font-semibold mb-2 text-gray-900">
-                          {member.name || 'Member Name'}
-                        </h3>
-                        <p className="text-ieee-blue font-medium mb-4">
-                          {member.achievement || 'Achievement'}
-                        </p>
-                        <p className="text-gray-700 leading-relaxed">
-                          {member.bio || 'Member bio placeholder...'}
-                        </p>
-                        {/* Contact Icons - Always Display */}
-                        <div className="mt-4 flex gap-4 justify-center md:justify-start">
-                          <a
-                            href={member.linkedin || '#'}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-all duration-200 hover:scale-110"
-                            aria-label={`${member.name} LinkedIn`}
-                          >
-                            <FaLinkedinIn />
-                          </a>
-                          <a
-                            href={`mailto:${member.email || '#'}`}
-                            className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-all duration-200 hover:scale-110"
-                            aria-label={`${member.name} Email`}
-                          >
-                            <FaEnvelope />
-                          </a>
-                        </div>
-                      </div>
+                <div className="relative z-10 flex flex-col items-center text-center gap-4">
+                  <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-white/10 overflow-hidden flex items-center justify-center">
+                    {member.image ? (
+                      <Image
+                        src={`/${member.image}`}
+                        alt={member.name || 'Member'}
+                        width={140}
+                        height={140}
+                        className="object-cover w-full h-full"
+                      />
+                    ) : (
+                      <span className="text-white text-3xl font-bold">
+                        {member.name?.charAt(0) || '?'}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-semibold mb-1 text-white">
+                      {member.name || 'Member Name'}
+                    </h3>
+                    <p className="text-yellow-300 font-medium mb-3 text-sm md:text-base">
+                      {member.achievement || 'Achievement'}
+                    </p>
+                    {/* Contact Icons - Always Display */}
+                    <div className="mt-4 flex gap-4 justify-center">
+                      <a
+                        href={member.linkedin || '#'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-2xl text-yellow-300 hover:text-yellow-200 transition-all duration-200 hover:scale-110"
+                        aria-label={`${member.name} LinkedIn`}
+                      >
+                        <FaLinkedinIn />
+                      </a>
+                      <a
+                        href={`mailto:${member.email || '#'}`}
+                        className="text-2xl text-yellow-300 hover:text-yellow-200 transition-all duration-200 hover:scale-110"
+                        aria-label={`${member.name} Email`}
+                      >
+                        <FaEnvelope />
+                      </a>
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-
-            {/* Navigation Arrows */}
-            {members.length > 1 && (
-              <>
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
-                  aria-label="Previous member"
-                >
-                  <svg
-                    className="w-6 h-6 text-ieee-blue"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
-                  aria-label="Next member"
-                >
-                  <svg
-                    className="w-6 h-6 text-ieee-blue"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </>
-            )}
-
-            {/* Dots Indicator */}
-            {members.length > 1 && (
-              <div className="flex justify-center gap-2 mt-6">
-                {members.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentIndex ? 'bg-ieee-blue' : 'bg-gray-300'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            )}
+            ))}
           </div>
         </div>
       </div>

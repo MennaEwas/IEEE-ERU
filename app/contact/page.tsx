@@ -3,9 +3,10 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PageHeader from '@/components/PageHeader'
-import { FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa'
+import { FaLinkedinIn, FaEnvelope, FaFacebookF } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa6'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import contactData from '@/content/contact.json'
 
 function SectionWithAnimation({ children }: { children: React.ReactNode }) {
   const { ref, isVisible } = useScrollAnimation()
@@ -15,6 +16,27 @@ function SectionWithAnimation({ children }: { children: React.ReactNode }) {
     </div>
   )
 }
+
+interface ContactContent {
+  email: string
+  office: {
+    building: string
+    room: string
+    address: string
+  }
+  hours: {
+    weekdays: string
+    saturday: string
+    sunday: string
+  }
+  social: {
+    facebook: string
+    linkedin: string
+    tiktok: string
+  }
+}
+
+const contact = contactData as ContactContent
 
 export default function ContactPage() {
   return (
@@ -37,28 +59,28 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-white mb-2">Email</h3>
                     <a 
-                      href="mailto:contact@ieee-student.org" 
+                      href={`mailto:${contact.email}`} 
                       className="text-gray-200 hover:text-white transition-colors"
                     >
-                      contact@ieee-student.org
+                      {contact.email}
                     </a>
                   </div>
                   
                   <div>
                     <h3 className="font-semibold text-white mb-2">Office Location</h3>
                     <p className="text-gray-200">
-                      Engineering Building<br />
-                      Room 101<br />
-                      University Campus
+                      {contact.office.building}<br />
+                      {contact.office.room}<br />
+                      {contact.office.address}
                     </p>
                   </div>
                   
                   <div>
                     <h3 className="font-semibold text-white mb-2">Office Hours</h3>
                     <p className="text-gray-200">
-                      Monday - Friday: 9:00 AM - 5:00 PM<br />
-                      Saturday: 10:00 AM - 2:00 PM<br />
-                      Sunday: Closed
+                      {contact.hours.weekdays}<br />
+                      {contact.hours.saturday}<br />
+                      {contact.hours.sunday}
                     </p>
                   </div>
                   
@@ -66,7 +88,7 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-white mb-4">Follow Us</h3>
                     <div className="flex gap-4">
                       <a 
-                        href="#" 
+                        href={contact.social.linkedin} 
                         className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
                         aria-label="LinkedIn"
                         target="_blank"
@@ -75,7 +97,7 @@ export default function ContactPage() {
                         <FaLinkedinIn />
                       </a>
                       <a 
-                        href="#" 
+                        href={`mailto:${contact.email}`} 
                         className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
                         aria-label="Email"
                         target="_blank"
@@ -84,16 +106,16 @@ export default function ContactPage() {
                         <FaEnvelope />
                       </a>
                       <a 
-                        href="#" 
+                        href={contact.social.facebook} 
                         className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
-                        aria-label="Instagram"
+                        aria-label="Facebook"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaInstagram />
+                        <FaFacebookF />
                       </a>
                       <a 
-                        href="#" 
+                        href={contact.social.tiktok} 
                         className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
                         aria-label="TikTok"
                         target="_blank"

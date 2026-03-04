@@ -1,20 +1,29 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa';
-import { FaTiktok } from 'react-icons/fa6';
+import { FaLinkedinIn, FaEnvelope, FaFacebookF } from 'react-icons/fa'
+import { FaTiktok } from 'react-icons/fa6'
+import contactData from '@/content/contact.json'
 
+interface ContactContent {
+  email: string
+  social: {
+    facebook: string
+    linkedin: string
+    tiktok: string
+  }
+}
+
+const contact = contactData as ContactContent
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
-
-
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: FaLinkedinIn },
-    { name: 'Email', href: '#', icon: FaEnvelope },
-    { name: 'Instagram', href: '#', icon: FaInstagram },
-    { name: 'TikTok', href: '#', icon: FaTiktok },
-  ];
+    { name: 'LinkedIn', href: contact.social.linkedin, icon: FaLinkedinIn },
+    { name: 'Email', href: `mailto:${contact.email}`, icon: FaEnvelope },
+    { name: 'Facebook', href: contact.social.facebook, icon: FaFacebookF },
+    { name: 'TikTok', href: contact.social.tiktok, icon: FaTiktok },
+  ]
 
   const footerLinks = [
     { href: '/about', label: 'About' },
@@ -38,7 +47,7 @@ export default function Footer() {
                 height={40}
                 className="h-10 w-10 object-contain"
               />
-              <span className="ml-3 font-semibold">Student Organization</span>
+              <span className="ml-3 font-semibold">IEEE ERU Student Organization</span>
             </div>
             <p className="text-gray-400 text-sm">
               Empowering engineers and innovators through collaboration and professional development.

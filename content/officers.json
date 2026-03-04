@@ -1,38 +1,34 @@
 [
   {
     "id": "officer-1",
-    "name": "HAmssa Hossam",
+    "name": "Hamssa Hossam",
     "position": "Secretary",
-    "image": "officers/1.jpeg",
-    "bio": "",
-    "email": "",
-    "linkedin": ""
+    "image": "assets/officers/l1.png",
+    "email": "hamssahossam610@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/hamssa-hossam-rakha"
   },
   {
     "id": "officer-2",
     "name": "Mohamed El Azazy",
     "position": "Treasurer",
-    "image": "officers/2.jpg",
-    "bio": "",
-    "email": "",
-    "linkedin": ""
+    "image": "assets/officers/l2.png",
+    "email": "MedoEl3zazy@gmail.com",
+    "linkedin": "http://linkedin.com/in/mohamed-el3zazy"
   },
   {
     "id": "officer-3",
     "name": "Tasbeeh Mahmoud",
     "position": "Founder & ChairPerson",
-    "image": "officers/3.jpeg",
-    "bio": "",
-    "email": "",
-    "linkedin": ""
+    "image": "assets/officers/l3.png",
+    "email": "Tasbeeh.afara@ieeeypegypt.org",
+    "linkedin": "https://www.linkedin.com/in/tasbeeh-mahmoud-757a54216/?originalSubdomain=eg"
   },
   {
     "id": "officer-4",
     "name": "Zahy Adel",
     "position": "Vice ChairPerson",
-    "image": "officers/4.jpeg",
-    "bio": "",
-    "email": "",
-    "linkedin": ""
+    "image": "assets/officers/l4.png",
+    "email": "zahyadel4@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/eng-zahy-adel-/?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   }
 ]

@@ -29,7 +29,6 @@ export interface Officer {
   name: string
   position: string
   image: string
-  bio: string
   email: string
   linkedin: string
 }
@@ -46,7 +45,6 @@ export interface BestMember {
   name: string
   achievement: string
   image: string
-  bio: string
   email: string
   linkedin: string
 }
