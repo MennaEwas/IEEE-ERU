@@ -2,22 +2,22 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import partnersData from '@/content/partners.json'
 
-// Automatically load all partner images from assets/partners/
-const PARTNER_IMAGES = [
-  'partners/p1.jpg',
-  'partners/p2.jpg',
-  'partners/p3.jpg',
-  'partners/p4.jpg',
-  'partners/p5.jpg',
-  'partners/p6.jpg',
-]
+interface Partner {
+  id: string
+  name: string
+  logo: string
+  website?: string
+}
 
 export default function Partners() {
   const [isPaused, setIsPaused] = useState(false)
 
+  const partners = partnersData as Partner[]
+
   // Duplicate the array to create seamless loop
-  const duplicatedPartners = [...PARTNER_IMAGES, ...PARTNER_IMAGES]
+  const duplicatedPartners = [...partners, ...partners]
 
   return (
     <section className="section-padding bg-ieee-blue-dark overflow-hidden">
@@ -32,24 +32,26 @@ export default function Partners() {
         >
           <div className="overflow-hidden">
             <div 
-              className={`flex gap-12 items-center ${isPaused ? 'pause-animation' : 'marquee-animation'}`}
+              className={`flex gap-12 items-center marquee-animation ${isPaused ? 'pause-animation' : ''}`}
               style={{
                 width: 'max-content',
               }}
             >
-              {duplicatedPartners.map((image, index) => (
+              {duplicatedPartners.map((partner, index) => (
                 <a
-                  key={`${image}-${index}`}
-                  href="#"
-                  className="flex-shrink-0 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300"
+                  key={`${partner.id}-${index}`}
+                  href={partner.website || '#'}
+                  className={`flex-shrink-0 flex items-center justify-center cursor-pointer hover:scale-105 transition-all duration-300 ${
+                    partner.website ? '' : 'cursor-default'
+                  }`}
                   style={{ width: '200px', height: '100px' }}
-                  aria-label={`Partner ${index + 1}`}
+                  aria-label={partner.name || `Partner ${index + 1}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image
-                    src={`/${image}`}
-                    alt={`Partner ${index + 1}`}
+                    src={`/${partner.logo}`}
+                    alt={partner.name || `Partner ${index + 1}`}
                     width={200}
                     height={100}
                     className="object-contain w-full h-full grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"

@@ -59,7 +59,7 @@ export default function Leadership() {
   return (
     <section className="section-padding bg-ieee-blue-dark overflow-hidden">
       <div className="container-custom w-full">
-        <h2 className="text-center mb-16 md:mb-40 fade-in-up text-white relative z-20">Leadership &amp; Officers</h2>
+        <h2 className="text-center mb-16 md:mb-44 fade-in-up text-white relative z-20">Leadership &amp; Officers</h2>
         <div className="w-full max-w-6xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16 w-full">
             {visibleOfficers.map(({ officer, position }) => {

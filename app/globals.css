@@ -237,6 +237,27 @@
   will-change: transform;
 }
 
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(-4px) rotateZ(0deg);
+  }
+}
+
+.committee-float {
+  animation: floatRotate var(--float-speed, 4s) ease-in-out infinite;
+  will-change: transform;
+}
+
+
 @keyframes goldShineSweep {
   0% {
     opacity: 0;
