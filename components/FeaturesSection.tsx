@@ -30,7 +30,7 @@ export default function FeaturesSection() {
   if (features.length === 0) return null
 
   return (
-    <section className="section-padding bg-gradient-to-b from-ieee-blue to-ieee-blue-dark">
+    <section className="relative section-padding">
       <div className="container-custom">
         <h2 className="text-center mb-16 fade-in-up text-white">Why Join Us?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -67,7 +67,7 @@ export default function Leadership() {
   ]
 
   return (
-    <section className="section-padding bg-ieee-blue-dark overflow-hidden relative">
+    <section className="relative section-padding overflow-hidden">
       <FloatingIcons icons={floatingIcons} />
       <div className="container-custom w-full relative z-10">
         <h2 className="text-center mb-16 md:mb-44 fade-in-up text-white relative z-20">Leadership &amp; Officers</h2>

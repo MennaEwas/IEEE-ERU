@@ -23,7 +23,7 @@ export default function Hero() {
   if (!content) return null
 
   return (
-    <section className="text-white section-padding relative overflow-hidden min-h-[600px] flex items-center">
+    <section className="relative section-padding text-white overflow-hidden min-h-[600px] flex items-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

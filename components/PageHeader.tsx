@@ -1,16 +1,11 @@
 interface PageHeaderProps {
   title: string
   subtitle?: string
-  background?: 'white' | 'blue'
 }
 
-export default function PageHeader({ title, subtitle, background = 'blue' }: PageHeaderProps) {
-  const bgClass = background === 'blue' 
-    ? 'bg-gradient-to-br from-ieee-blue to-ieee-blue-dark text-white' 
-    : 'bg-white text-gray-900'
-
+export default function PageHeader({ title, subtitle }: PageHeaderProps) {
   return (
-    <section className={`${bgClass} py-12 md:py-16`}>
+    <section className="relative py-12 md:py-16">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="mb-4 fade-in-up">{title}</h1>

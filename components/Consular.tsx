@@ -26,7 +26,7 @@ export default function Consular() {
   if (!content) return null
 
   return (
-    <section className="section-padding bg-gradient-to-b from-ieee-blue-dark to-ieee-blue text-white">
+    <section className="relative section-padding text-white">
       <div className="container-custom">
         {/* Section Title with Decorative Divider */}
         <div className="text-center mb-16 fade-in-up">

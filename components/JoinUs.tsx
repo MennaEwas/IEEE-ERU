@@ -2,7 +2,7 @@
 
 export default function JoinUs() {
   return (
-    <section className="section-padding bg-gradient-to-br from-ieee-blue via-ieee-blue to-ieee-blue-dark text-white relative overflow-hidden">
+    <section className="relative section-padding text-white overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

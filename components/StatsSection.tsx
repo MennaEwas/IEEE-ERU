@@ -64,7 +64,7 @@ export default function StatsSection() {
   if (stats.length === 0) return null
 
   return (
-    <section className="section-padding bg-ieee-blue-dark text-white">
+    <section className="relative section-padding text-white">
       <div className="container-custom">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => {

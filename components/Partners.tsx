@@ -20,7 +20,7 @@ export default function Partners() {
   const duplicatedPartners = [...partners, ...partners]
 
   return (
-    <section className="section-padding bg-ieee-blue-dark overflow-hidden">
+    <section className="relative section-padding overflow-hidden">
       <div className="container-custom">
         <h2 className="text-center mb-16 fade-in-up text-white">Our Partners</h2>
         

@@ -34,7 +34,7 @@ export default function BestMembers() {
   ]
 
   return (
-    <section className="section-padding bg-ieee-blue relative">
+    <section className="relative section-padding">
       <FloatingIcons icons={floatingIcons} />
       <div className="container-custom relative z-10">
         <h2 className="text-center mb-16 fade-in-up text-white relative z-10">Best Members</h2>

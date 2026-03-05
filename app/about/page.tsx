@@ -35,7 +35,7 @@ export default function AboutPage() {
   if (!content) return null
 
   return (
-    <main className="min-h-screen">
+    <main className="bg-ieee-blue-dark min-h-screen">
       <Navbar />
       <PageHeader 
         title="About Us" 
@@ -44,7 +44,7 @@ export default function AboutPage() {
       
       {/* Introduction Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-ieee-blue">
+        <section className="relative section-padding">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="mb-6 fade-in-up text-white">{content.introduction.title}</h2>
@@ -58,7 +58,7 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-ieee-blue-dark">
+        <section className="relative section-padding">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="mb-6 fade-in-up text-white">{content.mission.title}</h2>
@@ -72,7 +72,7 @@ export default function AboutPage() {
 
       {/* Vision Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-ieee-blue">
+        <section className="relative section-padding">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="mb-6 fade-in-up text-white">{content.vision.title}</h2>
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       {/* History Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-ieee-blue-dark">
+        <section className="relative section-padding">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="mb-6 fade-in-up text-white">{content.history.title}</h2>
@@ -100,7 +100,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <SectionWithAnimation>
-        <section className="section-padding bg-ieee-blue">
+        <section className="relative section-padding">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-center mb-12 fade-in-up text-white">Our Values</h2>

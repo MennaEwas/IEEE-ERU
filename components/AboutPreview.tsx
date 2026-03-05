@@ -22,7 +22,7 @@ export default function AboutPreview() {
   if (!content) return null
 
   return (
-    <section className="section-padding bg-ieee-blue-dark">
+    <section className="relative section-padding">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-center mb-6 fade-in-up text-white">{content.title}</h2>

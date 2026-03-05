@@ -49,7 +49,7 @@ export default function Committees() {
   ]
 
   return (
-    <section className="section-padding bg-ieee-blue overflow-visible relative">
+    <section className="relative section-padding overflow-visible">
       <FloatingIcons icons={floatingIcons} />
       <div className="container-custom relative z-10">
         <h2 className="text-center mb-36 fade-in-up text-white">

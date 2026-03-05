@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-white bg-ieee-blue;
+    @apply text-white;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -131,7 +131,7 @@
 
   /* Best Members gold shine card */
   .best-member-card {
-    @apply relative overflow-hidden rounded-xl bg-ieee-blue-dark shadow-xl;
+    @apply relative overflow-hidden rounded-xl bg-ieee-blue shadow-xl;
     @apply transition-transform transition-shadow duration-300 ease-out;
     @apply hover:-translate-y-1 hover:shadow-2xl hover:brightness-110;
   }
