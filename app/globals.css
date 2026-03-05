@@ -257,6 +257,24 @@
   will-change: transform;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(30deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-icon {
+  animation: float 10s ease-in-out infinite;
+  will-change: transform;
+  color: white;
+}
+
 
 @keyframes goldShineSweep {
   0% {

@@ -7,6 +7,7 @@ import committeesData from '@/content/committees.json'
 import ProjectsImage from '../assets/committee/projects.png'
 import MarketingImage from '@/assets/committee/marketing.png'
 import PRImage from '@/assets/committee/PR.png'
+import FloatingIcons, { IEEEIconSet } from './FloatingIcons'
 
 interface Committee {
   id: string
@@ -38,14 +39,24 @@ export default function Committees() {
     setExpandedId(prev => (prev === id ? null : id))
   }
 
+  const floatingIcons = [
+    { icon: IEEEIconSet.circle, top: '8%', left: '3%', size: 'lg' as const, duration: 12, delay: 0 },
+    { icon: IEEEIconSet.star, top: '15%', right: '5%', size: 'md' as const, duration: 16, delay: 1.5 },
+    { icon: IEEEIconSet.hexagon, bottom: '20%', left: '7%', size: 'sm' as const, duration: 14, delay: 0.5 },
+    { icon: IEEEIconSet.diamond, bottom: '12%', right: '8%', size: 'md' as const, duration: 18, delay: 2 },
+    { icon: IEEEIconSet.triangle, top: '45%', left: '2%', size: 'md' as const, duration: 10, delay: 1 },
+    { icon: IEEEIconSet.star, top: '55%', right: '3%', size: 'sm' as const, duration: 15, delay: 3 },
+  ]
+
   return (
     <section className="section-padding bg-ieee-blue overflow-visible relative">
-      <div className="container-custom">
+      <FloatingIcons icons={floatingIcons} />
+      <div className="container-custom relative z-10">
         <h2 className="text-center mb-36 fade-in-up text-white">
           Our Committees
         </h2>
 
-        <div className="flex flex-wrap items-start gap-x-6 gap-y-40 relative">
+        <div className="flex flex-wrap items-start gap-x-6 gap-y-40 relative z-10">
           {committees.map((committee, index) => {
             const imageForCommittee = committeeImages[committee.name]
 
