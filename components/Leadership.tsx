@@ -29,6 +29,7 @@ export default function Leadership() {
 
   type PositionedOfficer = {
     officer: Officer
+    index: number
     position: 'center' | 'side'
   }
 
@@ -40,20 +41,23 @@ export default function Leadership() {
   let visibleOfficers: PositionedOfficer[] = []
 
   if (total === 1) {
-    visibleOfficers = [{ officer: officers[0], position: 'center' }]
+    visibleOfficers = [{ officer: officers[0], index: 0, position: 'center' }]
   } else if (total === 2) {
+    const centerIndex = getWrappedIndex(currentIndex)
+    const sideIndex = getWrappedIndex(currentIndex + 1)
+
     visibleOfficers = [
-      { officer: officers[getWrappedIndex(currentIndex)], position: 'center' },
-      { officer: officers[getWrappedIndex(currentIndex + 1)], position: 'side' },
+      { officer: officers[centerIndex], index: centerIndex, position: 'center' },
+      { officer: officers[sideIndex], index: sideIndex, position: 'side' },
     ]
   } else {
     const leftIndex = getWrappedIndex(currentIndex - 1)
     const rightIndex = getWrappedIndex(currentIndex + 1)
 
     visibleOfficers = [
-      { officer: officers[leftIndex], position: 'side' },
-      { officer: officers[currentIndex], position: 'center' },
-      { officer: officers[rightIndex], position: 'side' },
+      { officer: officers[leftIndex], index: leftIndex, position: 'side' },
+      { officer: officers[currentIndex], index: currentIndex, position: 'center' },
+      { officer: officers[rightIndex], index: rightIndex, position: 'side' },
     ]
   }
 
@@ -73,16 +77,21 @@ export default function Leadership() {
         <h2 className="text-center mb-16 md:mb-44 fade-in-up text-white relative z-20">Leadership &amp; Officers</h2>
         <div className="w-full max-w-6xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16 w-full">
-            {visibleOfficers.map(({ officer, position }) => {
+            {visibleOfficers.map(({ officer, position, index }) => {
               const isCenterCard = position === 'center'
 
               return (
                 <div
                   key={officer.id}
+                  onClick={() => {
+                    if (!isCenterCard) {
+                      setCurrentIndex(index)
+                    }
+                  }}
                   className={`relative rounded-3xl pt-20 pb-8 px-6 md:pt-20 md:pb-10 md:px-8 flex flex-col items-center text-center bg-ieee-blue shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all duration-300 ${
                     isCenterCard
-                      ? 'lg:scale-150 brightness-100 z-10'
-                      : 'lg:scale-90 opacity-60 blur-[2px]'
+                      ? 'lg:scale-150 brightness-100 z-10 cursor-default'
+                      : 'lg:scale-90 opacity-60 blur-[2px] cursor-pointer'
                   }`}
                 >
                 {/* Light blue arch background - smaller than image so image extends below */}

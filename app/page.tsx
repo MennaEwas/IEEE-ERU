@@ -5,7 +5,7 @@ import FeaturesSection from '@/components/FeaturesSection'
 import Committees from '@/components/Committees'
 import Leadership from '@/components/Leadership'
 import BestMembers from '@/components/BestMembers'
-import Events from '@/components/Events'
+import Gallery from '@/components/Gallery'
 import Partners from '@/components/Partners'
 import Consular from '@/components/Consular'
 import StatsSection from '@/components/StatsSection'
@@ -22,7 +22,7 @@ export default function Home() {
         <Committees />
         <Leadership />
         <BestMembers />
-        <Events />
+        <Gallery />
         <Partners />
         <Consular />
         <StatsSection />
