@@ -8,6 +8,7 @@ import BestMembers from '@/components/BestMembers'
 import Gallery from '@/components/Gallery'
 import Partners from '@/components/Partners'
 import Consular from '@/components/Consular'
+import Leaderboard from '@/components/Leaderboard'
 import StatsSection from '@/components/StatsSection'
 import Footer from '@/components/Footer'
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Gallery />
         <Partners />
         <Consular />
+        <Leaderboard />
         <StatsSection />
         <Footer />
       </div>
