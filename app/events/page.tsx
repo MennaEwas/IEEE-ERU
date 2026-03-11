@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import eventsData from '@/content/events.json'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import FloatingIcons, { IEEEIconSet } from '@/components/FloatingIcons'
 
 interface Event {
   id: string
@@ -112,8 +113,9 @@ export default function EventsPage() {
   })
 
   return (
-    <main className="min-h-screen">
-      <Navbar />
+    <main className="bg-ieee-blue-dark min-h-screen overflow-x-hidden">
+      <div className="overflow-x-hidden">
+        <Navbar />
       <PageHeader 
         title="Events" 
         subtitle="Join us for workshops, seminars, and networking opportunities"
@@ -158,8 +160,16 @@ export default function EventsPage() {
       </section>
 
       {/* Events Grid */}
-      <section className="section-padding bg-ieee-blue-dark">
-        <div className="container-custom">
+      <section className="relative section-padding bg-ieee-blue-dark">
+        <FloatingIcons icons={[
+          { icon: IEEEIconSet.circle, top: '8%', left: '3%', size: 'lg' as const, duration: 12, delay: 0 },
+          { icon: IEEEIconSet.star, top: '15%', right: '5%', size: 'md' as const, duration: 16, delay: 1.5 },
+          { icon: IEEEIconSet.hexagon, bottom: '20%', left: '7%', size: 'sm' as const, duration: 14, delay: 0.5 },
+          { icon: IEEEIconSet.diamond, bottom: '12%', right: '8%', size: 'md' as const, duration: 18, delay: 2 },
+          { icon: IEEEIconSet.triangle, top: '45%', left: '2%', size: 'md' as const, duration: 10, delay: 1 },
+          { icon: IEEEIconSet.star, top: '55%', right: '3%', size: 'sm' as const, duration: 15, delay: 3 },
+        ]} />
+        <div className="container-custom relative z-10">
           {filteredEvents.length === 0 ? (
             <div className="text-center py-12 fade-in-up">
               <p className="text-gray-100 text-lg">
@@ -177,6 +187,7 @@ export default function EventsPage() {
       </section>
 
       <Footer />
+      </div>
     </main>
   )
 }

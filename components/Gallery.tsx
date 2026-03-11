@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
+import FloatingIcons, { IEEEIconSet } from './FloatingIcons'
 
 import img01 from '@/assets/gallery/event gallery/WhatsApp Image 2026-02-20 at 5.39.27 PM.jpeg'
 import img02 from '@/assets/gallery/event gallery/WhatsApp Image 2026-02-20 at 5.39.28 PM (1).jpeg'
@@ -88,12 +89,22 @@ export default function Gallery() {
 
   const visibleItems = getVisibleItems()
 
+  const floatingIcons = [
+    { icon: IEEEIconSet.circle, top: '8%', left: '3%', size: 'lg' as const, duration: 12, delay: 0 },
+    { icon: IEEEIconSet.star, top: '15%', right: '5%', size: 'md' as const, duration: 16, delay: 1.5 },
+    { icon: IEEEIconSet.hexagon, bottom: '20%', left: '7%', size: 'sm' as const, duration: 14, delay: 0.5 },
+    { icon: IEEEIconSet.diamond, bottom: '12%', right: '8%', size: 'md' as const, duration: 18, delay: 2 },
+    { icon: IEEEIconSet.triangle, top: '45%', left: '2%', size: 'md' as const, duration: 10, delay: 1 },
+    { icon: IEEEIconSet.star, top: '55%', right: '3%', size: 'sm' as const, duration: 15, delay: 3 },
+  ]
+
   return (
     <section className="relative section-padding">
+      <FloatingIcons icons={floatingIcons} />
       <div className="container-custom relative z-10">
         <div className="text-center mb-12 fade-in-up">
-          <h2 className="text-white mb-2">Our Gallery</h2>
-          <p className="text-sm md:text-base text-white/80 max-w-xl mx-auto">
+          <h2 className="text-white mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Our Gallery</h2>
+          <p className="text-xs sm:text-sm md:text-base text-white/80 max-w-xl mx-auto px-4">
             A glimpse of our activities, members, and moments across IEEE ERU.
           </p>
         </div>
@@ -103,7 +114,7 @@ export default function Gallery() {
             {visibleItems.map((item, idx) => (
               <div
                 key={item.id}
-                className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/30 shadow-lg shadow-black/40 h-64 md:h-72 group transition-transform duration-500 hover:-translate-y-1"
+                className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/5 border border-white/30 shadow-lg shadow-black/40 h-48 sm:h-56 md:h-64 lg:h-72 group transition-transform duration-500 hover:-translate-y-1"
                 style={{ transitionDelay: `${idx * 80}ms` }}
               >
                 <div className="absolute inset-0">

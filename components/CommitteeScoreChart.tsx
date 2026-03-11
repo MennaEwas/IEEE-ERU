@@ -32,7 +32,7 @@ export default function CommitteeScoreChart({ data }: CommitteeScoreChartProps) 
   }, [data])
 
   return (
-    <div className="w-full h-96 mt-8 chart-bars-container">
+    <div className="w-full h-64 sm:h-80 md:h-96 mt-4 sm:mt-6 md:mt-8 chart-bars-container">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={committeeTotals}
