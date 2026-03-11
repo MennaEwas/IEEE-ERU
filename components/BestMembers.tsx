@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import bestMembersData from '@/content/best-members.json'
 import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
+import FloatingIcons, { IEEEIconSet } from './FloatingIcons'
 
 interface BestMember {
   id: string
@@ -23,11 +24,21 @@ export default function BestMembers() {
 
   if (members.length === 0) return null
 
+  const floatingIcons = [
+    { icon: IEEEIconSet.star, top: '12%', left: '4%', size: 'md' as const, duration: 14, delay: 0 },
+    { icon: IEEEIconSet.circle, top: '25%', right: '6%', size: 'lg' as const, duration: 18, delay: 2 },
+    { icon: IEEEIconSet.hexagon, bottom: '18%', left: '8%', size: 'md' as const, duration: 12, delay: 1 },
+    { icon: IEEEIconSet.diamond, bottom: '30%', right: '10%', size: 'sm' as const, duration: 16, delay: 2.5 },
+    { icon: IEEEIconSet.triangle, top: '50%', left: '2%', size: 'sm' as const, duration: 10, delay: 0.5 },
+    { icon: IEEEIconSet.star, top: '65%', right: '4%', size: 'md' as const, duration: 15, delay: 1.5 },
+  ]
+
   return (
-    <section className="section-padding bg-ieee-blue">
-      <div className="container-custom">
-        <h2 className="text-center mb-16 fade-in-up text-white">Best Members</h2>
-        <div className="max-w-6xl mx-auto">
+    <section className="relative section-padding">
+      <FloatingIcons icons={floatingIcons} />
+      <div className="container-custom relative z-10">
+        <h2 className="text-center mb-16 fade-in-up text-white relative z-10">Best Members</h2>
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {members.map((member) => (
               <div

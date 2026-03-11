@@ -46,7 +46,7 @@ function Counter({ target, duration = 2000 }: { target: number; duration?: numbe
   }, [isVisible, hasStarted, target, duration])
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold mb-2">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
       {count}
     </div>
   )
@@ -64,16 +64,16 @@ export default function StatsSection() {
   if (stats.length === 0) return null
 
   return (
-    <section className="section-padding bg-ieee-blue-dark text-white">
+    <section className="relative section-padding text-white">
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {stats.map((stat, index) => {
             const targetValue = parseInt(stat.value) || 0
             return (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center px-2">
                 <Counter target={targetValue} duration={2000} />
-                <div className="text-lg font-semibold mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-200">{stat.description}</div>
+                <div className="text-base sm:text-lg font-semibold mb-1">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-gray-200">{stat.description}</div>
               </div>
             )
           })}

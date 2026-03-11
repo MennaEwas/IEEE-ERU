@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Welcome to IEEE ERUStudent Organization",
+    "title": "Welcome to IEEE ERU Student Organization",
     "subtitle": "Empowering the next generation of engineers and innovators through collaboration, learning, and professional development.",
     "primaryCTA": {
       "text": "Join Us",
@@ -12,7 +12,7 @@
     }
   },
   "aboutPreview": {
-    "title": "About Us",
+    "title": "About IEEE ERU SB",
     "content": "Our IEEE ERU Student Organization is dedicated to fostering innovation, professional development, and community engagement among engineering students. We provide opportunities for networking, skill development, and real-world project experience.",
     "cta": {
       "text": "Learn More",

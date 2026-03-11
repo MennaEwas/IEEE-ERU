@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container-custom">
-        <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="py-8 sm:py-10 md:py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Logo and Description */}
           <div>
             <div className="flex items-center mb-4">
@@ -47,22 +47,22 @@ export default function Footer() {
                 height={40}
                 className="h-10 w-10 object-contain"
               />
-              <span className="ml-3 font-semibold">IEEE ERU Student Organization</span>
+              <span className="ml-2 sm:ml-3 text-sm sm:text-base font-semibold">IEEE ERU Student Organization</span>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-xs sm:text-sm">
               Empowering engineers and innovators through collaboration and professional development.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
+            <ul className="space-y-1 sm:space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
                   >
                     {link.label}
                   </Link>
@@ -73,8 +73,8 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+            <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Follow Us</h3>
+            <div className="flex gap-3 sm:gap-4">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
                 return (
@@ -83,7 +83,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-2xl icon-white-hover"
+                    className="text-xl sm:text-2xl icon-white-hover"
                     aria-label={social.name}
                   >
                     <IconComponent />
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 py-6 text-center text-sm text-gray-400">
+        <div className="border-t border-gray-800 py-4 sm:py-6 text-center text-xs sm:text-sm text-gray-400">
           <p>© {currentYear} IEEE ERU Student Organization. All rights reserved.</p>
         </div>
       </div>

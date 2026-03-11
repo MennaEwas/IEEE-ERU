@@ -28,7 +28,7 @@ export default function Events() {
   if (upcomingEvents.length === 0) return null
 
   return (
-    <section className="section-padding bg-gradient-to-b from-ieee-blue-dark to-ieee-blue">
+    <section className="relative section-padding">
       <div className="container-custom">
         <div className="flex justify-between items-center mb-16 fade-in-up">
           <h2 className="text-white">Upcoming Events</h2>

@@ -1,20 +1,38 @@
 [
   {
     "id": "partner-1",
-    "name": "",
-    "logo": "assets/partners/partner-1.png",
-    "website": ""
+    "name": "ACU Masters",
+    "logo": "partners/acu.jpg",
+    "website": "https://web.facebook.com/profile.php?id=61564973589399"
   },
   {
     "id": "partner-2",
-    "name": "",
-    "logo": "assets/partners/partner-2.png",
-    "website": ""
+    "name": "GDG",
+    "logo": "partners/dsc.jpg",
+    "website": "https://web.facebook.com/GDGOnCampusFutureAcademy"
   },
   {
     "id": "partner-3",
-    "name": "",
-    "logo": "assets/partners/partner-3.png",
-    "website": ""
+    "name": "DataCamp",
+    "logo": "partners/datacamp.jpg",
+    "website": "https://www.datacamp.com/"
+  },
+  {
+    "id": "partner-4",
+    "name": "IEEE ERU SB",
+    "logo": "partners/ieee.jpg",
+    "website": "https://web.facebook.com/IEEE.ECUBranch"
+  },
+  {
+    "id": "partner-5",
+    "name": "IEEE BUC SB",
+    "logo": "partners/ieeebuc.jpg",
+    "website": "https://web.facebook.com/ieeebuc"
+  },
+  {
+    "id": "partner-6",
+    "name": "Tech Zone",
+    "logo": "partners/tz.jpg",
+    "website": "https://web.facebook.com/profile.php?id=61579895103933"
   }
 ]

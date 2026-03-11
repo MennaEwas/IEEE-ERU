@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Ahmed Mohamed",
+    "committee": "PR",
+    "score": 1250
+  },
+  {
+    "name": "Sarah Ali",
+    "committee": "Marketing",
+    "score": 1180
+  },
+  {
+    "name": "Omar Hassan",
+    "committee": "Graphic",
+    "score": 1120
+  },
+  {
+    "name": "Fatima Ibrahim",
+    "committee": "HR",
+    "score": 1080
+  },
+  {
+    "name": "Mohamed Khaled",
+    "committee": "PR",
+    "score": 1050
+  },
+  {
+    "name": "Nour El-Din",
+    "committee": "Marketing",
+    "score": 980
+  },
+  {
+    "name": "Youssef Mahmoud",
+    "committee": "Graphic",
+    "score": 950
+  },
+  {
+    "name": "Mariam Farid",
+    "committee": "HR",
+    "score": 920
+  },
+  {
+    "name": "Karim Tarek",
+    "committee": "PR",
+    "score": 890
+  },
+  {
+    "name": "Layla Samir",
+    "committee": "Marketing",
+    "score": 860
+  },
+  {
+    "name": "Amr Mostafa",
+    "committee": "Graphic",
+    "score": 830
+  },
+  {
+    "name": "Dina Waleed",
+    "committee": "HR",
+    "score": 800
+  },
+  {
+    "name": "Hassan Reda",
+    "committee": "PR",
+    "score": 780
+  },
+  {
+    "name": "Zeinab Ashraf",
+    "committee": "Marketing",
+    "score": 750
+  },
+  {
+    "name": "Tamer Fawzy",
+    "committee": "Graphic",
+    "score": 720
+  }
+]

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-white bg-ieee-blue;
+    @apply text-white;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -131,7 +131,7 @@
 
   /* Best Members gold shine card */
   .best-member-card {
-    @apply relative overflow-hidden rounded-xl bg-ieee-blue-dark shadow-xl;
+    @apply relative overflow-hidden rounded-xl bg-ieee-blue shadow-xl;
     @apply transition-transform transition-shadow duration-300 ease-out;
     @apply hover:-translate-y-1 hover:shadow-2xl hover:brightness-110;
   }
@@ -237,6 +237,45 @@
   will-change: transform;
 }
 
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(-4px) rotateZ(0deg);
+  }
+}
+
+.committee-float {
+  animation: floatRotate var(--float-speed, 4s) ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(30deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-icon {
+  animation: float 10s ease-in-out infinite;
+  will-change: transform;
+  color: white;
+}
+
+
 @keyframes goldShineSweep {
   0% {
     opacity: 0;
@@ -252,5 +291,121 @@
   100% {
     opacity: 0;
     transform: translate3d(140%, 60%, 0);
+  }
+}
+
+/* Chart bars with golden shine effect */
+.chart-bars-container {
+  position: relative;
+}
+
+.chart-bars-container :global(.recharts-bar-rectangle) {
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  animation: goldShineBars 2s ease-in-out infinite;
+}
+
+.chart-bars-container :global(.chart-bar-gold .recharts-bar-rectangle) {
+  filter: url(#goldGlow);
+}
+
+.chart-bars-container :global(.recharts-bar-rectangle:hover) {
+  animation: goldShineBarsHover 0.6s ease-in-out;
+}
+
+/* Table rows with golden shine effect */
+.leaderboard-table-row {
+  position: relative;
+  animation: goldShineTable 2s ease-in-out infinite;
+}
+
+.leaderboard-table-row:hover {
+  animation: goldShineTableHover 0.6s ease-in-out;
+}
+
+@keyframes goldShineBars {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0)) brightness(1);
+    opacity: 1;
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255, 200, 0, 0.4)) brightness(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes goldShineBarsHover {
+  0% {
+    filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 200, 0, 0.6)) brightness(1.2);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 200, 0, 0.4)) brightness(1.15);
+  }
+}
+
+@keyframes goldShineTable {
+  0%, 100% {
+    background-color: transparent;
+    box-shadow: 0 0 0px rgba(255, 200, 0, 0);
+  }
+  50% {
+    background-color: rgba(255, 200, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 200, 0, 0.4), inset 0 0 20px rgba(255, 200, 0, 0.1);
+  }
+}
+
+@keyframes goldShineTableHover {
+  0% {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0px rgba(255, 200, 0, 0);
+  }
+  50% {
+    background-color: rgba(255, 200, 0, 0.15);
+    box-shadow: 0 0 20px rgba(255, 200, 0, 0.6), inset 0 0 25px rgba(255, 200, 0, 0.15);
+  }
+  100% {
+    background-color: rgba(255, 200, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 200, 0, 0.4), inset 0 0 20px rgba(255, 200, 0, 0.1);
+  }
+}
+
+/* About page paragraph and card frames with lighting effect */
+.about-paragraph-frame {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  animation: aboutLightingEffect 2s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.about-card-frame {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  animation: aboutLightingEffect 2s ease-in-out infinite;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.about-card-frame:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes aboutLightingEffect {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(255, 255, 255, 0), inset 0 0 0px rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.1);
   }
 }

@@ -7,6 +7,7 @@ import { FaLinkedinIn, FaEnvelope, FaFacebookF } from 'react-icons/fa'
 import { FaTiktok } from 'react-icons/fa6'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import contactData from '@/content/contact.json'
+import FloatingIcons, { IEEEIconSet } from '@/components/FloatingIcons'
 
 function SectionWithAnimation({ children }: { children: React.ReactNode }) {
   const { ref, isVisible } = useScrollAnimation()
@@ -40,16 +41,25 @@ const contact = contactData as ContactContent
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
+    <main className="bg-ieee-blue-dark min-h-screen overflow-x-hidden">
+      <div className="overflow-x-hidden">
+        <Navbar />
       <PageHeader 
         title="Contact Us" 
         subtitle="Get in touch with our team"
       />
       
       <SectionWithAnimation>
-        <section className="section-padding bg-ieee-blue">
-          <div className="container-custom">
+        <section className="relative section-padding bg-ieee-blue">
+          <FloatingIcons icons={[
+            { icon: IEEEIconSet.circle, top: '8%', left: '3%', size: 'lg' as const, duration: 12, delay: 0 },
+            { icon: IEEEIconSet.star, top: '15%', right: '5%', size: 'md' as const, duration: 16, delay: 1.5 },
+            { icon: IEEEIconSet.hexagon, bottom: '20%', left: '7%', size: 'sm' as const, duration: 14, delay: 0.5 },
+            { icon: IEEEIconSet.diamond, bottom: '12%', right: '8%', size: 'md' as const, duration: 18, delay: 2 },
+            { icon: IEEEIconSet.triangle, top: '45%', left: '2%', size: 'md' as const, duration: 10, delay: 1 },
+            { icon: IEEEIconSet.star, top: '55%', right: '3%', size: 'sm' as const, duration: 15, delay: 3 },
+          ]} />
+          <div className="container-custom relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Contact Information */}
@@ -89,7 +99,7 @@ export default function ContactPage() {
                     <div className="flex gap-4">
                       <a 
                         href={contact.social.linkedin} 
-                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        className="text-2xl text-white hover:text-gray-200 transition-colors duration-200" 
                         aria-label="LinkedIn"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -98,7 +108,7 @@ export default function ContactPage() {
                       </a>
                       <a 
                         href={`mailto:${contact.email}`} 
-                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        className="text-2xl text-white hover:text-gray-200 transition-colors duration-200" 
                         aria-label="Email"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -107,7 +117,7 @@ export default function ContactPage() {
                       </a>
                       <a 
                         href={contact.social.facebook} 
-                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        className="text-2xl text-white hover:text-gray-200 transition-colors duration-200" 
                         aria-label="Facebook"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -116,7 +126,7 @@ export default function ContactPage() {
                       </a>
                       <a 
                         href={contact.social.tiktok} 
-                        className="text-2xl text-ieee-blue hover:text-ieee-blue-dark transition-colors duration-200" 
+                        className="text-2xl text-white hover:text-gray-200 transition-colors duration-200" 
                         aria-label="TikTok"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -132,19 +142,32 @@ export default function ContactPage() {
                 <div className="fade-in-delay-1">
                   <h2 className="mb-6 text-white">Send us a Message</h2>
                 <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
+                  onSubmit={(e) => {
+                    e.preventDefault()
+                    const form = e.target as HTMLFormElement
+                    const formData = new FormData(form)
+                    const name = formData.get('name') as string
+                    const email = formData.get('email') as string
+                    const subject = formData.get('subject') as string
+                    const message = formData.get('message') as string
+                    
+                    // Format email body
+                    const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`
+                    
+                    // Create mailto link with fixed recipient and subject prefix
+                    const mailtoLink = `mailto:mennatullah.abdelrahman@gmail.com?subject=IEEE-ERU: ${subject}&body=${emailBody}`
+                    
+                    // Open email client
+                    window.location.href = mailtoLink
+                    
+                    // Show success message
+                    alert('Your email client will open. Please send the email to complete your message.')
+                    
+                    // Reset form
+                    form.reset()
+                  }}
                   className="space-y-4"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Do not fill this out if you are human: <input name="bot-field" />
-                    </label>
-                  </p>
-                  
                   <div>
                     <label htmlFor="name" className="block mb-2 font-medium text-white">
                       Name *
@@ -213,6 +236,7 @@ export default function ContactPage() {
       </SectionWithAnimation>
 
       <Footer />
+      </div>
     </main>
   )
 }

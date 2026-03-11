@@ -23,7 +23,7 @@ export default function Hero() {
   if (!content) return null
 
   return (
-    <section className="text-white section-padding relative overflow-hidden min-h-[600px] flex items-center">
+    <section className="relative section-padding text-white overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[600px] flex items-center">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -49,7 +49,7 @@ export default function Hero() {
           <h1 className="mb-8 fade-in-up">
             {content.title}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-10 text-gray-100 leading-relaxed fade-in-delay-1 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-10 text-gray-100 leading-relaxed fade-in-delay-1 max-w-3xl mx-auto px-4">
             {content.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center fade-in-delay-2">

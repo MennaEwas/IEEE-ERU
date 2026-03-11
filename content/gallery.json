@@ -1,0 +1,33 @@
+[
+  {
+    "id": "gallery-1",
+    "image": "members/m1.jpg",
+    "alt": "IEEE member participating in an event"
+  },
+  {
+    "id": "gallery-2",
+    "image": "members/m2.jpg",
+    "alt": "IEEE member presenting or speaking"
+  },
+  {
+    "id": "gallery-3",
+    "image": "members/m3.jpg",
+    "alt": "IEEE members collaborating together"
+  },
+  {
+    "id": "gallery-4",
+    "image": "officers/l1.jpg",
+    "alt": "IEEE officer portrait"
+  },
+  {
+    "id": "gallery-5",
+    "image": "officers/l2.jpg",
+    "alt": "IEEE officer portrait"
+  },
+  {
+    "id": "gallery-6",
+    "image": "officers/l3.jpg",
+    "alt": "IEEE officer portrait"
+  }
+]
+
